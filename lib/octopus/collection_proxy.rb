@@ -4,7 +4,8 @@ module Octopus
       base.send(:include, Octopus::ShardTracking::Dynamic)
       base.sharded_methods :any?, :build, :count, :create, :create!, :concat, :delete, :delete_all,
                            :destroy, :destroy_all, :empty?, :find, :first, :include?, :last, :length,
-                           :many?, :pluck, :replace, :select, :size, :sum, :to_a, :uniq
+                           #:many?, :pluck, :replace, :select, :size, :sum, :to_a, :uniq
+                           :many?, :replace, :select, :size, :sum, :to_a, :uniq
     end
 
     def current_shard
